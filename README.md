@@ -2,9 +2,9 @@
 
 ### Project Overview
 >In this project, you'll work with data that could have come from a real-world web application, with fields representing information that a web server would record, such as HTTP status codes and URL paths. The web server and the reporting tool both connect to the same database, allowing information to flow from the web server into the report.You have to give the answer of three questions.Questions are as follows.
-1. What are the most popular three articles of all time?
-2. Who are the most popular article authors of all time?
-3. On which days did more than 1% of requests lead to errors?
+>1. What are the most popular three articles of all time?
+>2. Who are the most popular article authors of all time?
+>3. On which days did more than 1% of requests lead to errors?
 
 ### How to Run?
 
@@ -53,7 +53,8 @@
   ```
     create view request_error as select date(time),count(*) as error_count from log where status!='200 OK' group by date;
   ```
-  ```|  Column     |  Type  |
+  ```
+     |  Column     |  Type  |
      | ------------+--------|
      | date        | date   |
      | error_count | bigint |
@@ -65,7 +66,8 @@
   ```
     create view total_request as select date(time),count(*) as t_request from log group by date;
   ```
-  ```|  Column   |  Type  |
+  ```
+     |  Column   |  Type  |
      |-----------+--------|
      | date      | date   |
      | t_request | bigint |
@@ -75,7 +77,8 @@
   ```
     create view percentage as select request_error.date,round((100.0*request_error.error_count/total_request.t_request),2) as percent_error from request_error,total_request where request_error.date=total_request.date;
   ```
-  ```|  Column      |  Type   |
+  ```
+     |  Column      |  Type   |
      |--------------+---------|
      |date          | date    |
      |percent_error | numeric |
@@ -90,6 +93,7 @@
 #### Information about log.py file:
 
   1. Function in logs.py file
+
     ```get_query_result(query)
     ```
       -To get all query results.

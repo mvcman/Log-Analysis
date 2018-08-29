@@ -35,6 +35,10 @@
   ```
   3. Change directory to /vagrant and look around with ls.
 
+  ```
+  $ cd /vagrant
+  ```
+
 #### Setting up the database and Creating Views:
 
   1. Load the data in local database using the command:
@@ -42,10 +46,10 @@
   ```
     psql -d news -f newsdata.sql
   ```
-  The database includes three tables:
-  * The authors table includes information about the authors of articles.
-  * The articles table includes the articles themselves.
-  * The log table includes one entry for each time a user has accessed the site.
+    The database includes three tables:
+     * The authors table includes information about the authors of articles.
+     * The articles table includes the articles themselves.
+     * The log table includes one entry for each time a user has accessed the site.
 
   2. Use `psql -d news` to connect to database.
 
@@ -94,19 +98,25 @@
 
   1. Function in logs.py file
 
-    ```get_query_result(query)
+    ```
+    get_query_result(query)
     ```
       -To get all query results.
-    ```print_articles_query_results(query_result)
+
+    ```
+    print_articles_query_results(query_result)
     ```
       -To print articles query result.
-    ```print_author_query_results(query_result)
+    ```
+    print_author_query_results(query_result)
     ```
       -To print author query result.
-    ```print_error_query_results(query_result)
+    ```
+    print_error_query_results(query_result)
     ```
       -To print error query result.
-    ```dict()
+    ```
+    dict()
     ```
       -To store {} (curlibraces) in variables. Like query_1_result = dict() To create array.
 

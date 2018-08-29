@@ -53,29 +53,33 @@
   ```
     create view request_error as select date(time),count(*) as error_count from log where status!='200 OK' group by date;
   ```
-  |  Column     |  Type  |
-  | ------------+--------|
-  | date        | date   |
-  | error_count | bigint |
+  ```|  Column     |  Type  |
+     | ------------+--------|
+     | date        | date   |
+     | error_count | bigint |
+  ```
 
 
   4. Create view total_request using:
+
   ```
     create view total_request as select date(time),count(*) as t_request from log group by date;
   ```
-  |  Column   |  Type  |
-  |-----------+--------|
-  | date      | date   |
-  | t_request | bigint |
+  ```|  Column   |  Type  |
+     |-----------+--------|
+     | date      | date   |
+     | t_request | bigint |
+  ```
 
   5. Create view percentage using views request_error and total_request using following command:
   ```
     create view percentage as select request_error.date,round((100.0*request_error.error_count/total_request.t_request),2) as percent_error from request_error,total_request where request_error.date=total_request.date;
   ```
-  |  Column      |  Type   |
-  |--------------+---------|
-  |date          | date    |
-  |percent_error | numeric |
+  ```|  Column      |  Type   |
+     |--------------+---------|
+     |date          | date    |
+     |percent_error | numeric |
+  ```
 
 
 #### Running the queries:
@@ -84,16 +88,22 @@
     $ python logs.py
   ```
 #### Information about log.py file:
+
   1. Function in logs.py file
-    `get_query_result(query)`
+    ```get_query_result(query)
+    ```
       -To get all query results.
-    `print_articles_query_results(query_result)`
+    ```print_articles_query_results(query_result)
+    ```
       -To print articles query result.
-    `print_author_query_results(query_result)`
+    ```print_author_query_results(query_result)
+    ```
       -To print author query result.
-    `print_error_query_results(query_result)`
+    ```print_error_query_results(query_result)
+    ```
       -To print error query result.
-    `dict()`
+    ```dict()
+    ```
       -To store {} (curlibraces) in variables. Like query_1_result = dict() To create array.
 
 #### FAQ's: [here](https://classroom.udacity.com/nanodegrees/nd004/parts/8d3e23e1-9ab6-47eb-b4f3-d5dc7ef27bf0/modules/bc51d967-cb21-46f4-90ea-caf73439dc59/lessons/262a84d7-86dc-487d-98f9-648aa7ca5a0f/concepts/b2ff9cba-210e-463e-9321-2605f65491a9)

@@ -36,7 +36,7 @@
   3. Change directory to /vagrant and look around with ls.
 
   ```
-  $ cd /vagrant
+    $ cd /vagrant
   ```
 
 #### Setting up the database and Creating Views:
@@ -98,26 +98,14 @@
 
   1. Function in logs.py file
 
-    ```
-    get_query_result(query)
-    ```
-      -To get all query results.
+       >get_query_result(query)---To get all query results.
 
-    ```
-    print_articles_query_results(query_result)
-    ```
-      -To print articles query result.
-    ```
-    print_author_query_results(query_result)
-    ```
-      -To print author query result.
-    ```
-    print_error_query_results(query_result)
-    ```
-      -To print error query result.
-    ```
-    dict()
-    ```
-      -To store {} (curlibraces) in variables. Like query_1_result = dict() To create array.
+       >print_articles_query_results(query_result)---To print articles query result.
+
+       >print_author_query_results(query_result)---To print author query result.
+
+       >print_error_query_results(query_result)---To print error query result.
+
+       >dict()---To store {} (curlibraces) in variables. Like query_1_result = dict() To create array.
 
 #### FAQ's: [here](https://classroom.udacity.com/nanodegrees/nd004/parts/8d3e23e1-9ab6-47eb-b4f3-d5dc7ef27bf0/modules/bc51d967-cb21-46f4-90ea-caf73439dc59/lessons/262a84d7-86dc-487d-98f9-648aa7ca5a0f/concepts/b2ff9cba-210e-463e-9321-2605f65491a9)

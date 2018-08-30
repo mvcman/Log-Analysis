@@ -28,7 +28,6 @@ def get_query_result(query):
     db.close()
     return results
 
-
 def print_articles_query_results(query_result):
     print ("""\n1. The 3 most popular articles of all time are:\n""")
     for result in query_result['results']:

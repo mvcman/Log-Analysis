@@ -87,6 +87,8 @@
      |date          | date    |
      |percent_error | numeric |
   ```
+  6. To comes out from the database use ` \q `command:
+
 
 
 #### Running the queries:

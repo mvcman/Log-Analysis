@@ -102,11 +102,11 @@
 
        >get_query_result(query)---To get all query results.
 
-       >print_articles_query_results(query_result)---To print articles query result.
+       >print_articles_query_results(query_result)--To print articles query result.
 
-       >print_author_query_results(query_result)---To print author query result.
+       >print_author_query_results(query_result)--To print author query result.
 
-       >print_error_query_results(query_result)---To print error query result.
+       >print_error_query_results(query_result)--To print error query result.
 
        >dict()---To store {} (curlibraces) in variables.
 
